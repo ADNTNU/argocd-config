@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: danielneset/idata2306:Demo-0778e4ca86667898d66f242ce4cffdfa7151e1ae
+        image: danielneset/idata2306:Demo-6d65a0a7c92285fe50eb59a377e8805ee373253c
         ports:
         - containerPort: 8081
           protocol: TCP
