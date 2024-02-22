@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: dev2306-service
+  name: prod2306-service
 spec:
   selector:
-    app: dev2306
+    app: prod2306
   ports:
     - protocol: TCP
       port: 8080
