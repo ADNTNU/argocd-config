@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: prod2306
-        image: danielneset/idata2306:latest
+        image: danielneset/idata2306
         ports:
         - containerPort: 8080
           protocol: TCP
