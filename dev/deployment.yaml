@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp
+  name: prod2306
 spec:
   selector:
     matchLabels:
-      app: myapp
+      app: prod2306
   replicas: 3
   template:
     metadata:
       labels:
-        app: myapp
+        app: prod2306
     spec:
       containers:
-      - name: myapp
-        image: danielneset/idata2306:Demo-6d65a0a7c92285fe50eb59a377e8805ee373253c
+      - name: prod2306
+        image: danielneset/idata2306:prod-8fff1b2eb4656912230c92b2fbb6d3d29b72c605
         ports:
         - containerPort: 8080
           protocol: TCP
