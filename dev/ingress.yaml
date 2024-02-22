@@ -14,4 +14,4 @@ spec:
           service:
             name: prod2306-service
             port:
-              number: 443
+              number: 8080
