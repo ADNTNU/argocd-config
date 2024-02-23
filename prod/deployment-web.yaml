@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: prod2306-web
-        image: danielneset/idata2301
+        image: danielneset/idata2301:latest
         ports:
         - containerPort: 3000
           protocol: TCP
