@@ -5,12 +5,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: prod2306
+      app: prod2306-web
   replicas: 3
   template:
     metadata:
       labels:
-        app: prod2306
+        app: prod2306-web
     spec:
       containers:
       - name: prod2306-web
