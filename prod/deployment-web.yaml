@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prod2306-web
+spec:
+  selector:
+    matchLabels:
+      app: prod2306
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: prod2306
+    spec:
+      containers:
+      - name: prod2306-web
+        image: danielneset/idata2301
+        ports:
+        - containerPort: 3000
+          protocol: TCP
