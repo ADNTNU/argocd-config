@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: prod-idata2306
+  name: flightfinder-prod
   namespace: argocd
 spec:
   project: default
@@ -12,7 +12,7 @@ spec:
     path: prod
   destination:
     server: https://kubernetes.default.svc
-    namespace: prod2306
+    namespace: prod
 
   syncPolicy:
     syncOptions:
