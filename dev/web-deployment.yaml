@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dev-web
+spec:
+  selector:
+    matchLabels:
+      app: dev-web
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: dev-web
+    spec:
+      containers:
+        - name: dev-web
+          image: danielneset/idata2301:prod-web-43fb1c1702d2976f99390733a24bc3d1375bd50b
+          ports:
+            - containerPort: 3000
+              protocol: TCP
