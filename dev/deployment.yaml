@@ -13,15 +13,15 @@ spec:
         app: dev-api
     spec:
       containers:
-      - name: dev-api
-        image: danielneset/idata2306dev:dev-d423672db6ecb5865af159f5f9362ff1fb5b07df
-        ports:
-        - containerPort: 8080
-          protocol: TCP
-        env:
-        - name: DB_HOST
-          value: "192.168.0.207"
-        - name: DB_PORT
-          value: "3306"
-        - name: DB_NAME
-          value: "dev"
+        - name: dev-api
+          image: danielneset/idata2306dev:dev-d423672db6ecb5865af159f5f9362ff1fb5b07df
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          env:
+            - name: DB_HOST
+              value: "localhost"
+            - name: DB_PORT
+              value: "3306"
+            - name: DB_NAME
+              value: "dev"
