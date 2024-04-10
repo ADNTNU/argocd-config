@@ -14,7 +14,14 @@ spec:
     spec:
       containers:
       - name: dev-api
-        image: danielneset/idata2306dev:dev-dd4c956206138438c20cfc7f9816ba93d191c779
+        image: danielneset/idata2306dev:dev-9cccb510dcfe9767899bc191fdc659b84f11f2a2
         ports:
         - containerPort: 8080
           protocol: TCP
+        env:
+        - name: DB_HOST
+          value: "host.docker.internal"
+        - name: DB_PORT
+          value: "3306"
+        - name: DB_NAME
+          value: "dev"
