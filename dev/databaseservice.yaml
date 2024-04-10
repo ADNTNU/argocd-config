@@ -4,7 +4,7 @@ metadata:
   name: external-db
 spec:
   type: ExternalName
-  externalName: 127.0.0.1
+  externalName: host.docker.internal
   ports:
     - name: mysql
       port: 3306
