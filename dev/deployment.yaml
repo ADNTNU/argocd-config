@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: dev-api
-          image: danielneset/idata2306dev:dev-d423672db6ecb5865af159f5f9362ff1fb5b07df
+          image: danielneset/idata2306dev:dev-873bfa1a343efae311b848f57f68e96e9321a42b
           ports:
             - containerPort: 8080
               protocol: TCP
@@ -25,3 +25,7 @@ spec:
               value: "3306"
             - name: DB_NAME
               value: "dev"
+            - name: DB_USERNAME
+              value: "dbeaver"
+            - name: DB_PASSWORD
+              value: "dbeaver"
