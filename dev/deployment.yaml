@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: dev-api
-          image: danielneset/idata2306dev:localtestbuild
+          image: danielneset/idata2306dev:dev-5f6d2c6acba4bb937dfb7ffb558fbbf3a2447710
           ports:
             - containerPort: 8080
               protocol: TCP
