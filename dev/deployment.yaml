@@ -12,6 +12,7 @@ spec:
       labels:
         app: dev-api
     spec:
+      hostNetwork: true
       containers:
         - name: dev-api
           image: danielneset/idata2306dev:dev-5f6d2c6acba4bb937dfb7ffb558fbbf3a2447710
@@ -20,7 +21,7 @@ spec:
               protocol: TCP
           env:
             - name: DB_HOST
-              value: "external-db"
+              value: "localhost"
             - name: DB_PORT
               value: "3306"
             - name: DB_NAME
