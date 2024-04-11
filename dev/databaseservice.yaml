@@ -4,7 +4,7 @@ metadata:
   name: external-db
 spec:
   type: ExternalName
-  externalName: 192.168.0.207
+  externalName: 129.241.153.225
   ports:
     - name: mysql
       port: 3306
