@@ -20,7 +20,7 @@ spec:
             - name: MYSQL_ROOT_PASSWORD
               value: "dbeaver"
             - name: MYSQL_DATABASE
-              value: "dev" # Optional: MySQL will automatically create a database with this name.
+              value: "dev"
           ports:
             - containerPort: 3306
               name: mysql
@@ -29,6 +29,16 @@ spec:
               mountPath: /var/lib/mysql
             - name: mysql-initdb
               mountPath: /docker-entrypoint-initdb.d
+          readinessProbe:
+            tcpSocket:
+              port: 3306
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            tcpSocket:
+              port: 3306
+            initialDelaySeconds: 15
+            periodSeconds: 20
       volumes:
         - name: mysql-persistent-storage
           persistentVolumeClaim:
