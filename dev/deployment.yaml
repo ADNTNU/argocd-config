@@ -20,12 +20,12 @@ spec:
               protocol: TCP
           env:
             - name: DB_HOST
-              value: "mysql"
+              value: "external-db"
             - name: DB_PORT
               value: "3306"
             - name: DB_NAME
               value: "dev"
             - name: DB_USERNAME
-              value: "root"
+              value: "dbeaver"
             - name: DB_PASSWORD
               value: "dbeaver"
