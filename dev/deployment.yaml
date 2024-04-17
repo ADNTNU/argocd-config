@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: dev-api
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:
@@ -27,6 +27,9 @@ spec:
             - name: DB_NAME
               value: "dev"
             - name: DB_USERNAME
-              value: "dbeaver"
+              value: "devUser"
             - name: DB_PASSWORD
-              value: "dbeaver"
+              valueFrom:
+                secretKeyRef:
+                  name: devpass
+                  key: secret-key
