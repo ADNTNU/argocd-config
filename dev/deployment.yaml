@@ -21,7 +21,7 @@ spec:
               protocol: TCP
           env:
             - name: PORT
-              value: 8081
+              value: "8081"
             - name: DB_HOST
               value: "localhost"
             - name: DB_PORT
