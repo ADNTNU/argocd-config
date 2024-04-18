@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: dev-api
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:
@@ -15,7 +15,7 @@ spec:
       hostNetwork: true
       containers:
         - name: dev-api
-          image: danielneset/idata2306dev:dev-70fc74d8c12452b9d530b7ba981136606e6039db
+          image: danielneset/idata2306dev:dev-626e203109ad182b49a9a4cd7a3e2001bbf5b779
           ports:
             - containerPort: 8081
               protocol: TCP
