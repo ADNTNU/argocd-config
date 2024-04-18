@@ -15,11 +15,13 @@ spec:
       hostNetwork: true
       containers:
         - name: dev-api
-          image: danielneset/idata2306dev:dev-badc6ace80d54dc414b88182736b67ce954e5352
+          image: danielneset/idata2306dev:dev-70fc74d8c12452b9d530b7ba981136606e6039db
           ports:
-            - containerPort: 8080
+            - containerPort: 8081
               protocol: TCP
           env:
+            - name: PORT
+              value: 8081
             - name: DB_HOST
               value: "localhost"
             - name: DB_PORT
