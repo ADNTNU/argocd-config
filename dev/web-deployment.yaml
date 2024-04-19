@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: dev-web
-          image: danielneset/idata2301dev:dev-web-6df6a99f6da93e2e32949c96dc2776b65b69e2db
+          image: danielneset/idata2301dev:dev-web-afd028ae5b056c2d1926faa3ee28c43fa1eb2a81
           ports:
             - containerPort: 3000
               protocol: TCP
