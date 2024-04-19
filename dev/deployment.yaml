@@ -15,13 +15,15 @@ spec:
       hostNetwork: true
       containers:
         - name: dev-api
-          image: danielneset/idata2306dev:dev-626e203109ad182b49a9a4cd7a3e2001bbf5b779
+          image: danielneset/idata2306dev:prod-db4d7e8769d909f7cd194f17160ccc3c46f4a797
           ports:
             - containerPort: 8081
               protocol: TCP
           env:
             - name: PORT
               value: "8081"
+            - name: DDL
+              value: "update"
             - name: DB_HOST
               value: "localhost"
             - name: DB_PORT
@@ -35,3 +37,9 @@ spec:
                 secretKeyRef:
                   name: devpass
                   key: secret-key
+            - name: JWT_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: jwtdev
+                  key: secret-key
+

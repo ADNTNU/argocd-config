@@ -20,6 +20,10 @@ spec:
         - containerPort: 8080
           protocol: TCP
         env:
+          - name: PORT
+            value: "8080"
+          - name: DDL
+            value: "update"
           - name: DB_HOST
             value: "localhost"
           - name: DB_PORT
@@ -32,4 +36,9 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: prodpass
+                key: secret-key
+          - name: JWT_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: jwtprod
                 key: secret-key
