@@ -15,7 +15,7 @@ spec:
       hostNetwork: true
       containers:
         - name: dev-api
-          image: danielneset/idata2306dev:prod-db4d7e8769d909f7cd194f17160ccc3c46f4a797
+          image: danielneset/idata2306dev:dev-26f930708bfcc621a095dc40f154b36a4412cc24
           ports:
             - containerPort: 8081
               protocol: TCP
