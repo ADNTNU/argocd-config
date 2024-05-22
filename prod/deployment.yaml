@@ -15,7 +15,7 @@ spec:
       hostNetwork: true
       containers:
       - name: prod-api
-        image: danielneset/idata2306
+        image: danielneset/idata2306:prod-e034da1552c75b7c1a055c9e8bfa8c62bcad7bce
         ports:
         - containerPort: 8080
           protocol: TCP
