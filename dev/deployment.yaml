@@ -42,4 +42,6 @@ spec:
                 secretKeyRef:
                   name: jwtdev
                   key: secret-key
+            - name: SPRING_PROFILES_ACTIVE
+              value: "dev"
 
