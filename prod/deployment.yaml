@@ -29,7 +29,7 @@ spec:
           - name: DB_PORT
             value: "3306"
           - name: DB_NAME
-            value: "dev"
+            value: "prod"
           - name: DB_USERNAME
             value: "prodUser"
           - name: DB_PASSWORD
