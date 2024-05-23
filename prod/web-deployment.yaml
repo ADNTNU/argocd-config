@@ -14,7 +14,19 @@ spec:
     spec:
       containers:
       - name: prod-web
-        image: danielneset/idata2301:prod-web-3499e99b74f10fbc0a7d9f09918d2b3f87003953
+        image: danielneset/idata2301:prod-web-7196205c13c3760ef6562f9c237a3ce337501e79
         ports:
         - containerPort: 3000
           protocol: TCP
+        -env:
+          - name: NEXT_PUBLIC_API_BASEURL
+            value: "http://api.flightfinder.space/"
+          - name: NEXT_PUBLIC_BASE_URL
+            value: "https://flightfinder.space/"
+          - name: NEXTAUTH_URL
+            value: "https://flightfinder.space/api/auth"
+          - name: NEXTAUTH_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: jwtprod
+                key: secret-key
